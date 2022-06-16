@@ -16,8 +16,7 @@
   grid-row-start: row1-start;
   grid-row-end: 3; */
 }
-.outter-image {
-}
+
 .inner-image {
   border-radius: 30px;
 }
