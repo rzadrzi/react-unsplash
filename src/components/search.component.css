@@ -1,0 +1,10 @@
+.search {
+  /* color: #e11010; */
+}
+.search-bar {
+  border-radius: 30px;
+  font: size 76px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  width: 50%;
+}
