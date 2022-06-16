@@ -1,13 +1,11 @@
 import React from "react";
 import "./result.component.css";
-// import "./result.component.sass";
-
 import axios from "axios";
 
-const ACCESS_KEY =
-  "fd2dff70f99d4388cbea64304a342855ec927993650fc5f0462356ae281a1e1f";
-
-export const Result: React.FunctionComponent<any> = ({ searchWord }: any) => {
+export const Result: React.FunctionComponent<any> = ({
+  searchWord,
+  ACCESS_KEY,
+}: any) => {
   const [searchResult, setSearchResult] = React.useState<any>();
   React.useEffect(() => {
     const baseURL = `https://api.unsplash.com/search/photos?query=${searchWord}&client_id=${ACCESS_KEY}`;
@@ -16,8 +14,6 @@ export const Result: React.FunctionComponent<any> = ({ searchWord }: any) => {
       .then((response) => setSearchResult(response.data.results))
       .catch((error) => console.error(error.message));
   }, [searchWord]);
-
-  console.log(searchResult);
 
   return (
     <div>
